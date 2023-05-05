@@ -26,17 +26,126 @@ public class Venta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nombreTextfield2 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        botonRevisardisponibilidad = new javax.swing.JButton();
+        nombreTextfield3 = new javax.swing.JTextField();
+        botonCrearcliente = new javax.swing.JButton();
+        botonBuscarcliente1 = new javax.swing.JButton();
+        nombreTextfield4 = new javax.swing.JTextField();
+        botonGenerarventa = new javax.swing.JButton();
+        botonVolver3 = new javax.swing.JButton();
+
+        nombreTextfield2.setBackground(new java.awt.Color(102, 102, 102));
+        nombreTextfield2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        nombreTextfield2.setForeground(new java.awt.Color(255, 204, 0));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
+        jLabel1.setText("Video Juegos");
+
+        botonRevisardisponibilidad.setBackground(new java.awt.Color(102, 102, 102));
+        botonRevisardisponibilidad.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonRevisardisponibilidad.setForeground(new java.awt.Color(255, 204, 0));
+        botonRevisardisponibilidad.setText("Revisar Disponibilidad");
+
+        nombreTextfield3.setBackground(new java.awt.Color(102, 102, 102));
+        nombreTextfield3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        nombreTextfield3.setForeground(new java.awt.Color(255, 204, 0));
+
+        botonCrearcliente.setBackground(new java.awt.Color(102, 102, 102));
+        botonCrearcliente.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonCrearcliente.setForeground(new java.awt.Color(255, 204, 0));
+        botonCrearcliente.setText("Crear Cliente");
+
+        botonBuscarcliente1.setBackground(new java.awt.Color(102, 102, 102));
+        botonBuscarcliente1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonBuscarcliente1.setForeground(new java.awt.Color(255, 204, 0));
+        botonBuscarcliente1.setText("Buscar Cliente");
+
+        nombreTextfield4.setBackground(new java.awt.Color(102, 102, 102));
+        nombreTextfield4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        nombreTextfield4.setForeground(new java.awt.Color(255, 204, 0));
+
+        botonGenerarventa.setBackground(new java.awt.Color(102, 102, 102));
+        botonGenerarventa.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonGenerarventa.setForeground(new java.awt.Color(255, 204, 0));
+        botonGenerarventa.setText("Generar Venta");
+
+        botonVolver3.setBackground(new java.awt.Color(102, 102, 102));
+        botonVolver3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonVolver3.setForeground(new java.awt.Color(255, 204, 0));
+        botonVolver3.setText("Volver");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
+                .addGap(8, 8, 8))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nombreTextfield3)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nombreTextfield4)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addComponent(botonCrearcliente, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(botonBuscarcliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botonGenerarventa, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95)
+                        .addComponent(botonVolver3)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botonRevisardisponibilidad, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(168, 168, 168))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(botonRevisardisponibilidad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nombreTextfield3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonCrearcliente)
+                    .addComponent(botonBuscarcliente1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nombreTextfield4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonGenerarventa)
+                    .addComponent(botonVolver3))
+                .addGap(30, 30, 30))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -78,5 +187,15 @@ public class Venta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBuscarcliente1;
+    private javax.swing.JButton botonCrearcliente;
+    private javax.swing.JButton botonGenerarventa;
+    private javax.swing.JButton botonRevisardisponibilidad;
+    private javax.swing.JButton botonVolver3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField nombreTextfield2;
+    private javax.swing.JTextField nombreTextfield3;
+    private javax.swing.JTextField nombreTextfield4;
     // End of variables declaration//GEN-END:variables
 }
