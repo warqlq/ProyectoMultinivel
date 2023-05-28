@@ -128,6 +128,11 @@ public class BuscarInventario extends javax.swing.JFrame {
         botonVolver.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver.setForeground(new java.awt.Color(255, 204, 0));
         botonVolver.setText("Volver");
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -201,6 +206,13 @@ public class BuscarInventario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        
+        Inventario inv =new Inventario();
+        inv.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonVolverActionPerformed
 
     /**
      * @param args the command line arguments

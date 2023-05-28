@@ -93,11 +93,21 @@ public class AgregarInventario extends javax.swing.JFrame {
         botonAgregarinventario2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonAgregarinventario2.setForeground(new java.awt.Color(255, 204, 0));
         botonAgregarinventario2.setText("Agregar");
+        botonAgregarinventario2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarinventario2ActionPerformed(evt);
+            }
+        });
 
         botonVolver.setBackground(new java.awt.Color(102, 102, 102));
         botonVolver.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver.setForeground(new java.awt.Color(255, 204, 0));
         botonVolver.setText("Volver");
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -185,6 +195,17 @@ public class AgregarInventario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonAgregarinventario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarinventario2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregarinventario2ActionPerformed
+
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        
+        Inventario inv =new Inventario();
+        inv.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonVolverActionPerformed
 
     /**
      * @param args the command line arguments

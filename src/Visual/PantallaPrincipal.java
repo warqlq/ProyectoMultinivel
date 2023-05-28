@@ -4,6 +4,8 @@
  */
 package Visual;
 
+import static java.lang.System.exit;
+
 /**
  *
  * @author user
@@ -137,19 +139,33 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInventarioActionPerformed
-        // TODO add your handling code here:
+       
+        Inventario inv=new Inventario();
+        inv.setVisible(true);
+        this.dispose();
+        
+        
     }//GEN-LAST:event_botonInventarioActionPerformed
 
     private void botonVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVentaActionPerformed
-        // TODO add your handling code here:
+        
+        Venta ve=new Venta();
+        ve.setVisible(true);
+        this.dispose(); 
+        
+        
     }//GEN-LAST:event_botonVentaActionPerformed
 
     private void botonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonClientesActionPerformed
-        // TODO add your handling code here:
+      
+        Clientes cli=new Clientes();
+        cli.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonClientesActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
-        // TODO add your handling code here:
+      
+        exit(0);
     }//GEN-LAST:event_botonSalirActionPerformed
 
     /**

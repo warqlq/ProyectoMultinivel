@@ -53,6 +53,11 @@ public class Venta extends javax.swing.JFrame {
         botonRevisardisponibilidad.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonRevisardisponibilidad.setForeground(new java.awt.Color(255, 204, 0));
         botonRevisardisponibilidad.setText("Revisar Disponibilidad");
+        botonRevisardisponibilidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRevisardisponibilidadActionPerformed(evt);
+            }
+        });
 
         nombreTextfield3.setBackground(new java.awt.Color(102, 102, 102));
         nombreTextfield3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -62,11 +67,21 @@ public class Venta extends javax.swing.JFrame {
         botonCrearcliente.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonCrearcliente.setForeground(new java.awt.Color(255, 204, 0));
         botonCrearcliente.setText("Crear Cliente");
+        botonCrearcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCrearclienteActionPerformed(evt);
+            }
+        });
 
         botonBuscarcliente1.setBackground(new java.awt.Color(102, 102, 102));
         botonBuscarcliente1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonBuscarcliente1.setForeground(new java.awt.Color(255, 204, 0));
         botonBuscarcliente1.setText("Buscar Cliente");
+        botonBuscarcliente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarcliente1ActionPerformed(evt);
+            }
+        });
 
         nombreTextfield4.setBackground(new java.awt.Color(102, 102, 102));
         nombreTextfield4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -81,6 +96,11 @@ public class Venta extends javax.swing.JFrame {
         botonVolver3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver3.setForeground(new java.awt.Color(255, 204, 0));
         botonVolver3.setText("Volver");
+        botonVolver3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolver3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -150,6 +170,34 @@ public class Venta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonRevisardisponibilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRevisardisponibilidadActionPerformed
+        
+       RevisarDisponibilidad rev =new RevisarDisponibilidad();
+        rev.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonRevisardisponibilidadActionPerformed
+
+    private void botonCrearclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearclienteActionPerformed
+       
+        CrearCliente crec =new CrearCliente();
+        crec.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonCrearclienteActionPerformed
+
+    private void botonBuscarcliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarcliente1ActionPerformed
+        
+        BuscarClienteVenta buscv =new BuscarClienteVenta();
+        buscv.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonBuscarcliente1ActionPerformed
+
+    private void botonVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver3ActionPerformed
+      
+        PantallaPrincipal pant =new PantallaPrincipal();
+        pant.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonVolver3ActionPerformed
 
     /**
      * @param args the command line arguments

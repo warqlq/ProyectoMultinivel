@@ -77,6 +77,11 @@ public class Clientes extends javax.swing.JFrame {
         botonBuscarcliente.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonBuscarcliente.setForeground(new java.awt.Color(255, 204, 0));
         botonBuscarcliente.setText("Buscar");
+        botonBuscarcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarclienteActionPerformed(evt);
+            }
+        });
 
         botonDescargarreporte.setBackground(new java.awt.Color(102, 102, 102));
         botonDescargarreporte.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -87,6 +92,11 @@ public class Clientes extends javax.swing.JFrame {
         botonVolver7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver7.setForeground(new java.awt.Color(255, 204, 0));
         botonVolver7.setText("Volver");
+        botonVolver7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolver7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,6 +146,20 @@ public class Clientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonBuscarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarclienteActionPerformed
+        
+        BuscarClienteCliente buscc =new BuscarClienteCliente();
+        buscc.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonBuscarclienteActionPerformed
+
+    private void botonVolver7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver7ActionPerformed
+       
+        PantallaPrincipal pant =new PantallaPrincipal();
+        pant.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonVolver7ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -109,6 +109,11 @@ public class CrearCliente extends javax.swing.JFrame {
         botonVolver5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver5.setForeground(new java.awt.Color(255, 204, 0));
         botonVolver5.setText("Volver");
+        botonVolver5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolver5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -187,6 +192,13 @@ public class CrearCliente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonVolver5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver5ActionPerformed
+        
+       Venta ven =new Venta();
+        ven.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonVolver5ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -8,12 +8,12 @@ package Visual;
  *
  * @author simclub01
  */
-public class BuscarCliente extends javax.swing.JFrame {
+public class BuscarClienteVenta extends javax.swing.JFrame {
 
     /**
      * Creates new form BuscarCliente
      */
-    public BuscarCliente() {
+    public BuscarClienteVenta() {
         initComponents();
     }
 
@@ -134,7 +134,10 @@ public class BuscarCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonVolver7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver7ActionPerformed
-        // TODO add your handling code here:
+       
+        Venta ven =new Venta();
+        ven.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonVolver7ActionPerformed
 
     /**
@@ -154,20 +157,21 @@ public class BuscarCliente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BuscarCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarClienteVenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BuscarCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarClienteVenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BuscarCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarClienteVenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BuscarCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarClienteVenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BuscarCliente().setVisible(true);
+                new BuscarClienteVenta().setVisible(true);
             }
         });
     }

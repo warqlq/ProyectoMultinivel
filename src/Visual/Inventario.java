@@ -67,16 +67,31 @@ public class Inventario extends javax.swing.JFrame {
         botonAgregarinventario.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonAgregarinventario.setForeground(new java.awt.Color(255, 204, 0));
         botonAgregarinventario.setText("Agregar");
+        botonAgregarinventario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarinventarioActionPerformed(evt);
+            }
+        });
 
         botonBuscarinventario.setBackground(new java.awt.Color(102, 102, 102));
         botonBuscarinventario.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonBuscarinventario.setForeground(new java.awt.Color(255, 204, 0));
         botonBuscarinventario.setText("Buscar");
+        botonBuscarinventario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarinventarioActionPerformed(evt);
+            }
+        });
 
         botonVolver.setBackground(new java.awt.Color(102, 102, 102));
         botonVolver.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver.setForeground(new java.awt.Color(255, 204, 0));
         botonVolver.setText("Volver");
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
@@ -131,6 +146,27 @@ public class Inventario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonAgregarinventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarinventarioActionPerformed
+        
+        AgregarInventario agg =new AgregarInventario();
+        agg.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonAgregarinventarioActionPerformed
+
+    private void botonBuscarinventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventarioActionPerformed
+       
+        BuscarInventario aggIn =new BuscarInventario();
+        aggIn.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonBuscarinventarioActionPerformed
+
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        
+        PantallaPrincipal pant =new PantallaPrincipal();
+        pant.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonVolverActionPerformed
 
     /**
      * @param args the command line arguments
