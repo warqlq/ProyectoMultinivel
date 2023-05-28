@@ -9,9 +9,19 @@ package Model;
  * @author simclub01
  */
 public class Venta {
+    private int idVenta;
     private Cliente cliente;
     private Videojuego videojuego;
 
+    public int getIdVenta() {
+        return idVenta;
+    }
+
+    public void setIdVenta(int idVenta) {
+        this.idVenta = idVenta;
+    }
+
+    
     public Cliente getCliente() {
         return cliente;
     }

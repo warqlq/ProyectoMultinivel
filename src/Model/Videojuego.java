@@ -9,11 +9,23 @@ package Model;
  * @author simclub01
  */
 public class Videojuego {
+    private int idVideojuego;
     private String nombre;
     private String consola;
     private int cantidad;
     private double precio;
 
+    public int getIdVideojuego() {
+        return idVideojuego;
+    }
+
+    public void setIdVideojuego(int idVideojuego) {
+        this.idVideojuego = idVideojuego;
+    }
+
+    
+    
+    
     public String getNombre() {
         return nombre;
     }
