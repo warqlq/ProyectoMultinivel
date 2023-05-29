@@ -4,6 +4,7 @@
  */
 package Visual;
 
+import Controller.ControladorCliente;
 import DAO.ClienteDao;
 import Model.Cliente;
 import javax.swing.JOptionPane;
@@ -213,7 +214,7 @@ public class CrearCliente extends javax.swing.JFrame {
 
     private void botonAgregarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarclienteActionPerformed
         
-        
+        /*
         ClienteDao cliente_dao = new ClienteDao();
         Cliente cliente= new Cliente();
         
@@ -233,50 +234,24 @@ public class CrearCliente extends javax.swing.JFrame {
        CCTextfield1.setText("");
         telefonoTextfield2.setText("");
         correoTextfield3.setText("");
-        
+        */
     }//GEN-LAST:event_botonAgregarclienteActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CrearCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CrearCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CrearCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CrearCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CrearCliente().setVisible(true);
-            }
-        });
+       CrearCliente v=new CrearCliente();
+       ControladorCliente c=new ControladorCliente(v);
+       v.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CCTextfield1;
-    private javax.swing.JButton botonAgregarcliente;
+    public javax.swing.JTextField CCTextfield1;
+    public javax.swing.JButton botonAgregarcliente;
     private javax.swing.JButton botonBuscarinventario3;
-    private javax.swing.JButton botonVolver5;
-    private javax.swing.JTextField correoTextfield3;
+    public javax.swing.JButton botonVolver5;
+    public javax.swing.JTextField correoTextfield3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -285,7 +260,7 @@ public class CrearCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombreTextfield;
-    private javax.swing.JTextField telefonoTextfield2;
+    public javax.swing.JTextField nombreTextfield;
+    public javax.swing.JTextField telefonoTextfield2;
     // End of variables declaration//GEN-END:variables
 }

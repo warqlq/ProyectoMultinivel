@@ -4,6 +4,7 @@
  */
 package Visual;
 
+import Controller.ControladorCliente;
 import DAO.ClienteDao;
 import Model.Cliente;
 import javax.swing.JOptionPane;
@@ -35,17 +36,17 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         nombreTextfield3 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        botonBuscarinventario3 = new javax.swing.JButton();
+        botonBuscarinventario = new javax.swing.JButton();
         botonVolver7 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        CCTextfield1 = new javax.swing.JTextField();
+        CC2Textfield1 = new javax.swing.JTextField();
         nombreTextfield5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         telefonoTextfield6 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         correoTextfield7 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        limpiar = new javax.swing.JButton();
+        botonVolver8 = new javax.swing.JButton();
 
         nombreTextfield3.setBackground(new java.awt.Color(102, 102, 102));
         nombreTextfield3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -59,13 +60,13 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 204, 0));
         jLabel2.setText("Video Juegos");
 
-        botonBuscarinventario3.setBackground(new java.awt.Color(102, 102, 102));
-        botonBuscarinventario3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonBuscarinventario3.setForeground(new java.awt.Color(255, 204, 0));
-        botonBuscarinventario3.setText("Buscar");
-        botonBuscarinventario3.addActionListener(new java.awt.event.ActionListener() {
+        botonBuscarinventario.setBackground(new java.awt.Color(102, 102, 102));
+        botonBuscarinventario.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonBuscarinventario.setForeground(new java.awt.Color(255, 204, 0));
+        botonBuscarinventario.setText("Buscar");
+        botonBuscarinventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonBuscarinventario3ActionPerformed(evt);
+                botonBuscarinventarioActionPerformed(evt);
             }
         });
 
@@ -84,9 +85,9 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 204, 0));
         jLabel6.setText("Ingrese CC");
 
-        CCTextfield1.setBackground(new java.awt.Color(102, 102, 102));
-        CCTextfield1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        CCTextfield1.setForeground(new java.awt.Color(255, 204, 0));
+        CC2Textfield1.setBackground(new java.awt.Color(102, 102, 102));
+        CC2Textfield1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        CC2Textfield1.setForeground(new java.awt.Color(255, 204, 0));
 
         nombreTextfield5.setBackground(new java.awt.Color(102, 102, 102));
         nombreTextfield5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -115,13 +116,13 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 204, 0));
         jLabel9.setText("Telefono");
 
-        limpiar.setBackground(new java.awt.Color(102, 102, 102));
-        limpiar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        limpiar.setForeground(new java.awt.Color(255, 204, 0));
-        limpiar.setText("Limpiar");
-        limpiar.addActionListener(new java.awt.event.ActionListener() {
+        botonVolver8.setBackground(new java.awt.Color(102, 102, 102));
+        botonVolver8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        botonVolver8.setForeground(new java.awt.Color(255, 204, 0));
+        botonVolver8.setText("Limpiar");
+        botonVolver8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                limpiarActionPerformed(evt);
+                botonVolver8ActionPerformed(evt);
             }
         });
 
@@ -137,11 +138,11 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CCTextfield1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(CC2Textfield1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(64, 64, 64)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(botonBuscarinventario3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(botonBuscarinventario, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,8 +160,8 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(botonVolver8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonVolver7, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
         );
@@ -171,9 +172,9 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(CCTextfield1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CC2Textfield1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(botonBuscarinventario3)
+                .addComponent(botonBuscarinventario)
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nombreTextfield5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -189,7 +190,7 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonVolver7)
-                    .addComponent(limpiar))
+                    .addComponent(botonVolver8))
                 .addGap(25, 25, 25))
         );
 
@@ -217,85 +218,61 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_botonVolver7ActionPerformed
 
-    private void botonBuscarinventario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventario3ActionPerformed
+    private void botonBuscarinventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventarioActionPerformed
         
         ClienteDao cliente_dao = new ClienteDao();
         Cliente cliente =new Cliente();
-        
-        if(CCTextfield1.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Ingrese el numero de cedula");
+       
+        if(CC2Textfield1.getText().equals("")){
+           JOptionPane.showMessageDialog(null, "Ingrese el numero de cedula");
         
         }else{
-         long cc= Long.parseLong(CCTextfield1.getText()); 
-        cliente.setCedula(cc);
+         long cc= Long.parseLong(CC2Textfield1.getText()); 
+       cliente.setCedula(cc);
         cliente_dao.buscar(cliente);
-        
+         
         nombreTextfield5.setText(cliente.getNombre());
         correoTextfield7.setText(cliente.getCorreoElectronico());
         telefonoTextfield6.setText(String.valueOf(cliente.getTelefono()));
         
         }
         
-    }//GEN-LAST:event_botonBuscarinventario3ActionPerformed
+    }//GEN-LAST:event_botonBuscarinventarioActionPerformed
 
-    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
-        
+    private void botonVolver8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver8ActionPerformed
+       
         nombreTextfield5.setText("");
-        CCTextfield1.setText("");
-        correoTextfield7.setText("");
-        telefonoTextfield6.setText("");
-    }//GEN-LAST:event_limpiarActionPerformed
+         correoTextfield7.setText("");
+         telefonoTextfield6.setText("");
+         CC2Textfield1.setText("");
+    }//GEN-LAST:event_botonVolver8ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BuscarClienteCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BuscarClienteCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BuscarClienteCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BuscarClienteCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new BuscarClienteCliente().setVisible(true);
             }
         });
+       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CCTextfield1;
-    private javax.swing.JButton botonBuscarinventario3;
-    private javax.swing.JButton botonVolver7;
-    private javax.swing.JTextField correoTextfield7;
+    public javax.swing.JTextField CC2Textfield1;
+    public javax.swing.JButton botonBuscarinventario;
+    public javax.swing.JButton botonVolver7;
+    public javax.swing.JButton botonVolver8;
+    public javax.swing.JTextField correoTextfield7;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton limpiar;
     private javax.swing.JTextField nombreTextfield3;
-    private javax.swing.JTextField nombreTextfield5;
-    private javax.swing.JTextField telefonoTextfield6;
+    public javax.swing.JTextField nombreTextfield5;
+    public javax.swing.JTextField telefonoTextfield6;
     // End of variables declaration//GEN-END:variables
 }
