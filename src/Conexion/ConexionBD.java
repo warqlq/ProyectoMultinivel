@@ -3,14 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Conexion;
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class ConexionBD {
 
     
-       //SE UTILIZA UN CONSTRUCTOR PRIVADO PARA ASEGURAR EL PATRON SINGLETON
+       //SE UTILIZA UN CONSTRUCTOR PRIVADO PARA ASEGURAR LA IMPLEMENTACION DEL PATRON SINGLETON
     private ConexionBD() {
         
         
@@ -31,10 +33,10 @@ public class ConexionBD {
              
              Class.forName("com.mysql.cj.jdbc.Driver");
              conexion= DriverManager.getConnection(URL,USERNAME,PASSWORD);
-             JOptionPane.showMessageDialog(null, "conexion exitososa ");
+             
              return conexion;
-         }catch(Exception e){
-             JOptionPane.showMessageDialog(null, "error:"+e);
+         }catch(ClassNotFoundException | SQLException e){
+             System.out.println(e);
          }
         return conexion;
     }

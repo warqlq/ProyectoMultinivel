@@ -4,6 +4,10 @@
  */
 package Visual;
 
+import DAO.ClienteDao;
+import Model.Cliente;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author simclub01
@@ -38,9 +42,9 @@ public class CrearCliente extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         nombreTextfield = new javax.swing.JTextField();
-        nombreTextfield1 = new javax.swing.JTextField();
-        nombreTextfield2 = new javax.swing.JTextField();
-        nombreTextfield3 = new javax.swing.JTextField();
+        CCTextfield1 = new javax.swing.JTextField();
+        telefonoTextfield2 = new javax.swing.JTextField();
+        correoTextfield3 = new javax.swing.JTextField();
         botonAgregarcliente = new javax.swing.JButton();
         botonVolver5 = new javax.swing.JButton();
 
@@ -84,28 +88,33 @@ public class CrearCliente extends javax.swing.JFrame {
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 204, 0));
-        jLabel7.setText("Dirección");
+        jLabel7.setText("Correo Electronico");
 
         nombreTextfield.setBackground(new java.awt.Color(102, 102, 102));
         nombreTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         nombreTextfield.setForeground(new java.awt.Color(255, 204, 0));
 
-        nombreTextfield1.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield1.setForeground(new java.awt.Color(255, 204, 0));
+        CCTextfield1.setBackground(new java.awt.Color(102, 102, 102));
+        CCTextfield1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        CCTextfield1.setForeground(new java.awt.Color(255, 204, 0));
 
-        nombreTextfield2.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield2.setForeground(new java.awt.Color(255, 204, 0));
+        telefonoTextfield2.setBackground(new java.awt.Color(102, 102, 102));
+        telefonoTextfield2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        telefonoTextfield2.setForeground(new java.awt.Color(255, 204, 0));
 
-        nombreTextfield3.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield3.setForeground(new java.awt.Color(255, 204, 0));
+        correoTextfield3.setBackground(new java.awt.Color(102, 102, 102));
+        correoTextfield3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        correoTextfield3.setForeground(new java.awt.Color(255, 204, 0));
 
         botonAgregarcliente.setBackground(new java.awt.Color(102, 102, 102));
         botonAgregarcliente.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonAgregarcliente.setForeground(new java.awt.Color(255, 204, 0));
         botonAgregarcliente.setText("Agregar");
+        botonAgregarcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarclienteActionPerformed(evt);
+            }
+        });
 
         botonVolver5.setBackground(new java.awt.Color(102, 102, 102));
         botonVolver5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -131,11 +140,11 @@ public class CrearCliente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(nombreTextfield1))
+                        .addComponent(CCTextfield1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(nombreTextfield2))
+                        .addComponent(telefonoTextfield2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -147,7 +156,7 @@ public class CrearCliente extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(nombreTextfield3))
+                                .addComponent(correoTextfield3))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(botonVolver5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,15 +174,15 @@ public class CrearCliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(nombreTextfield1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CCTextfield1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(nombreTextfield2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(telefonoTextfield2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(nombreTextfield3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(correoTextfield3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonAgregarcliente)
@@ -201,6 +210,31 @@ public class CrearCliente extends javax.swing.JFrame {
         ven.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonVolver5ActionPerformed
+
+    private void botonAgregarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarclienteActionPerformed
+        
+        
+        ClienteDao cliente_dao = new ClienteDao();
+        Cliente cliente= new Cliente();
+        
+        String nombre = nombreTextfield.getText();
+       long cc = Long.parseLong(CCTextfield1.getText());
+       long telefono = Long.parseLong(telefonoTextfield2.getText());
+       String correo = correoTextfield3.getText();
+       
+       cliente.setCedula(cc);
+       cliente.setNombre(nombre);
+       cliente.setTelefono(telefono);
+       cliente.setCorreoElectronico(correo);
+       
+       cliente_dao.crear(cliente);
+        JOptionPane.showMessageDialog(null, "Registro exitoso");
+        nombreTextfield.setText("");
+       CCTextfield1.setText("");
+        telefonoTextfield2.setText("");
+        correoTextfield3.setText("");
+        
+    }//GEN-LAST:event_botonAgregarclienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,9 +272,11 @@ public class CrearCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CCTextfield1;
     private javax.swing.JButton botonAgregarcliente;
     private javax.swing.JButton botonBuscarinventario3;
     private javax.swing.JButton botonVolver5;
+    private javax.swing.JTextField correoTextfield3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -250,8 +286,6 @@ public class CrearCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nombreTextfield;
-    private javax.swing.JTextField nombreTextfield1;
-    private javax.swing.JTextField nombreTextfield2;
-    private javax.swing.JTextField nombreTextfield3;
+    private javax.swing.JTextField telefonoTextfield2;
     // End of variables declaration//GEN-END:variables
 }
