@@ -15,6 +15,8 @@ public class BuscarClienteVenta extends javax.swing.JFrame {
      */
     public BuscarClienteVenta() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Buscar Cliente");
     }
 
     /**

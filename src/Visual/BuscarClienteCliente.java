@@ -15,6 +15,8 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
      */
     public BuscarClienteCliente() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Buscar Cliente");
     }
 
     /**
@@ -51,6 +53,11 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         botonBuscarinventario3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonBuscarinventario3.setForeground(new java.awt.Color(255, 204, 0));
         botonBuscarinventario3.setText("Buscar");
+        botonBuscarinventario3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarinventario3ActionPerformed(evt);
+            }
+        });
 
         botonVolver7.setBackground(new java.awt.Color(102, 102, 102));
         botonVolver7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -139,6 +146,10 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         cli.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonVolver7ActionPerformed
+
+    private void botonBuscarinventario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventario3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBuscarinventario3ActionPerformed
 
     /**
      * @param args the command line arguments

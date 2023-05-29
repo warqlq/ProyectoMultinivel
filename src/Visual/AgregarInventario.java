@@ -15,6 +15,8 @@ public class AgregarInventario extends javax.swing.JFrame {
      */
     public AgregarInventario() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Agregar Inventario");
     }
 
     /**

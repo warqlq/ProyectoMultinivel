@@ -15,6 +15,8 @@ public class BuscarInventario extends javax.swing.JFrame {
      */
     public BuscarInventario() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Buscar Inventario");
     }
 
     /**

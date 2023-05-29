@@ -15,6 +15,8 @@ public class CrearCliente extends javax.swing.JFrame {
      */
     public CrearCliente() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Crear Cliente");
     }
 
     /**

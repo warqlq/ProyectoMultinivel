@@ -4,6 +4,7 @@
  */
 package DAO;
 
+import Conexion.ConexionBD;
 import Model.Cliente;
 import java.util.ArrayList;
 
@@ -12,7 +13,9 @@ import java.util.ArrayList;
  * @author simclub01
  */
 public class ClienteDao implements DaoInterface{
-
+ 
+ 
+    
     @Override
     public void actualizar(Cliente cliente) {
         
@@ -24,19 +27,23 @@ public class ClienteDao implements DaoInterface{
     }
 
     @Override
-    public void eleminar(int id) {
+    public void eleminar(Cliente cliente) {
      
     }
 
     @Override
-    public Cliente buscar(int id) {
-        Cliente cliente = null;
-     return cliente; 
+    public void buscar(Cliente cliente) {
+        
     }
 
-    @Override
+    
+    
+    
+    
+    
+   /* @Override
     public ArrayList<Cliente> findAll() {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
-    
+    */
 }

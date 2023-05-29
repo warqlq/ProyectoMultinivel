@@ -15,6 +15,8 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
      */
     public RevisarDisponibilidad() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Revisar Disponibilidad");
     }
 
     /**

@@ -5,8 +5,59 @@
 package Conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import javax.swing.JOptionPane;
 
 public class ConexionBD {
+
+    
+       //SE UTILIZA UN CONSTRUCTOR PRIVADO PARA ASEGURAR EL PATRON SINGLETON
+    private ConexionBD() {
+        
+        
+    }
+    
+    //SE GUARDA EL ESTADO DE LA CONEXION A LA BD
+    private static Connection conexion;
+    
+    //LA VARIABLE QUE SE INSTANCIA SOLO UNA VEZ (SINGLETON)
+    private static ConexionBD instancia;
+    
+    private static final String URL = "jdbc:mysql://localhost:3306/tienda"; 
+    private static final String USERNAME = "root"; 
+     private static final String PASSWORD = "";
+    
+    public Connection conectar(){
+         try{
+             
+             Class.forName("com.mysql.cj.jdbc.Driver");
+             conexion= DriverManager.getConnection(URL,USERNAME,PASSWORD);
+             JOptionPane.showMessageDialog(null, "conexion exitososa ");
+             return conexion;
+         }catch(Exception e){
+             JOptionPane.showMessageDialog(null, "error:"+e);
+         }
+        return conexion;
+    }
+    
+    
+    //PATRON DE DISEÑO SINGLETON
+    
+    public static ConexionBD getInstance(){
+        if(instancia == null){
+            instancia = new ConexionBD();
+        }
+        return instancia;
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
     private String driver="com.mysql.cj.jdbc.Driver";
     String url = "jdbc:mysql://localhost:3306/tienda";
     private String usuario="root";
@@ -31,6 +82,6 @@ public class ConexionBD {
     }
 
     
-    
+    */
     
 }

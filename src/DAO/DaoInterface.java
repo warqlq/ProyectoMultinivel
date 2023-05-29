@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public interface DaoInterface {
     public void actualizar(Cliente cliente);
     public void crear(Cliente cliente);
-    public void eleminar(int id);
-    public Cliente buscar(int id);
+    public void eleminar(Cliente cliente);
+    public void buscar(Cliente cliente);
     public ArrayList<Cliente> findAll();
 }

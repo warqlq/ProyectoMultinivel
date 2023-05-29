@@ -15,6 +15,8 @@ public class Venta extends javax.swing.JFrame {
      */
     public Venta() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Venta");
     }
 
     /**
