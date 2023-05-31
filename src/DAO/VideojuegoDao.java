@@ -22,14 +22,14 @@ public class VideojuegoDao implements DaoInterfaceVideojuego {
      ResultSet rs=null;
     @Override
     public void actualizar(Videojuego videojuego) {
-        String sql = "update videojuego set  catidad = ?, precio = ? where id = ?";
+        String sql = "update videojuego set cantidad = ?, precio = ? where idVideojuego = ?";
        
         try{
             Connection conectar = conexion.conectar();
             PreparedStatement insertar = conectar.prepareStatement(sql);
             insertar.setInt(1,videojuego.getCantidad());
             insertar.setInt(2,videojuego.getPrecio());
-            insertar.setInt(3,videojuego.getPrecio());
+            insertar.setInt(3,videojuego.getIdVideojuego());
             insertar.executeUpdate();
             
         }catch(SQLException e){
@@ -55,7 +55,7 @@ public class VideojuegoDao implements DaoInterfaceVideojuego {
     }
     @Override
     public void eleminar(int idVideojuego) {
-          String sql = "delete from videojuego where id = ?";
+          String sql = "delete from videojuego where idVideojuego = ?";
         try{
             Connection conectar = conexion.conectar();
             PreparedStatement insertar = conectar.prepareStatement(sql);
@@ -69,12 +69,13 @@ public class VideojuegoDao implements DaoInterfaceVideojuego {
 
     @Override
     public Videojuego buscar(Videojuego videojuego) {
-        Videojuego videojuego1;
-        String sql = "Select* from videojuego where id = ?";
+        Videojuego videojuego1=null;
+        String sql = "Select* from videojuego where nombre = ? AND consola = ? ";
          try{
             Connection conectar = conexion.conectar();
             PreparedStatement insertar = conectar.prepareStatement(sql);
-             insertar.setString(1, videojuego.getIdVideojuego() + "");
+             insertar.setString(1, videojuego.getNombre()+ "");
+             insertar.setString(2, videojuego.getConsola()+ "");
              rs=insertar.executeQuery();
                 if (rs.next()){
                 videojuego1 = new Videojuego(
@@ -89,10 +90,10 @@ public class VideojuegoDao implements DaoInterfaceVideojuego {
             conectar.close();
             
         }catch(SQLException e){
-            System.out.println("Error al eliminar Videojuego"+e);
+            System.out.println("Error al buscar Videojuego"+e);
         }
         
-        return videojuego;
+        return videojuego1;
     }
 
     @Override

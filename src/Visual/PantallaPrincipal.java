@@ -4,6 +4,7 @@
  */
 package Visual;
 
+import Controller.ControladorVideojuego;
 import static java.lang.System.exit;
 
 /**
@@ -142,9 +143,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInventarioActionPerformed
-       
-        Inventario inv=new Inventario();
-        inv.setVisible(true);
+        Inventario v=new Inventario();
+        ControladorVideojuego c=new ControladorVideojuego(v);
+        v.setVisible(true);
         this.dispose();
         
         

@@ -55,7 +55,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="botonAgregarinventario2" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="actualizarb" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
                               <Component id="jLabel5" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
                           </Group>
@@ -67,8 +67,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cantidadTextfield" min="-2" pref="144" max="-2" attributes="0"/>
-                                      <Component id="precioTextfield" min="-2" pref="144" max="-2" attributes="0"/>
+                                      <Component id="cantidadtxt" min="-2" pref="144" max="-2" attributes="0"/>
+                                      <Component id="preciotxt" min="-2" pref="144" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -86,16 +86,16 @@
                   <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="cantidadTextfield" min="-2" max="-2" attributes="0"/>
+                      <Component id="cantidadtxt" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="precioTextfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="preciotxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="93" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="botonAgregarinventario2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="actualizarb" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="botonVolver" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
@@ -143,7 +143,7 @@
             <Property name="text" type="java.lang.String" value="Precio"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="precioTextfield">
+        <Component class="javax.swing.JTextField" name="preciotxt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -155,8 +155,11 @@
               <Color blue="0" green="cc" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="cantidadTextfield">
+        <Component class="javax.swing.JTextField" name="cantidadtxt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -168,8 +171,11 @@
               <Color blue="0" green="cc" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="botonAgregarinventario2">
+        <Component class="javax.swing.JButton" name="actualizarb">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -183,8 +189,11 @@
             <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAgregarinventario2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actualizarbActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botonVolver">
           <Properties>

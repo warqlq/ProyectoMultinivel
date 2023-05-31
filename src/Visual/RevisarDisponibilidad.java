@@ -4,6 +4,8 @@
  */
 package Visual;
 
+import Controller.ControladorVideojuego;
+
 /**
  *
  * @author simclub01

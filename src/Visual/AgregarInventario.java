@@ -4,6 +4,8 @@
  */
 package Visual;
 
+import Controller.ControladorVideojuego;
+
 /**
  *
  * @author simclub01
@@ -35,11 +37,11 @@ public class AgregarInventario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        consolaCombobox = new javax.swing.JComboBox<>();
-        nombreTextfield = new javax.swing.JTextField();
-        precioTextfield = new javax.swing.JTextField();
-        cantidadTextfield = new javax.swing.JTextField();
-        botonAgregarinventario2 = new javax.swing.JButton();
+        consolatxt = new javax.swing.JComboBox<>();
+        nombretxt = new javax.swing.JTextField();
+        preciotxt = new javax.swing.JTextField();
+        cantidadtxt = new javax.swing.JTextField();
+        bAgregar = new javax.swing.JButton();
         botonVolver = new javax.swing.JButton();
 
         jTextField3.setBackground(new java.awt.Color(102, 102, 102));
@@ -74,30 +76,30 @@ public class AgregarInventario extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 204, 0));
         jLabel5.setText("Precio");
 
-        consolaCombobox.setBackground(new java.awt.Color(102, 102, 102));
-        consolaCombobox.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        consolaCombobox.setForeground(new java.awt.Color(255, 204, 0));
-        consolaCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PS4", "Xbox", "Nintendo Switch" }));
+        consolatxt.setBackground(new java.awt.Color(102, 102, 102));
+        consolatxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        consolatxt.setForeground(new java.awt.Color(255, 204, 0));
+        consolatxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PS4", "Xbox", "Nintendo Switch" }));
 
-        nombreTextfield.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield.setForeground(new java.awt.Color(255, 204, 0));
+        nombretxt.setBackground(new java.awt.Color(102, 102, 102));
+        nombretxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        nombretxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        precioTextfield.setBackground(new java.awt.Color(102, 102, 102));
-        precioTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        precioTextfield.setForeground(new java.awt.Color(255, 204, 0));
+        preciotxt.setBackground(new java.awt.Color(102, 102, 102));
+        preciotxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        preciotxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        cantidadTextfield.setBackground(new java.awt.Color(102, 102, 102));
-        cantidadTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        cantidadTextfield.setForeground(new java.awt.Color(255, 204, 0));
+        cantidadtxt.setBackground(new java.awt.Color(102, 102, 102));
+        cantidadtxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        cantidadtxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        botonAgregarinventario2.setBackground(new java.awt.Color(102, 102, 102));
-        botonAgregarinventario2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonAgregarinventario2.setForeground(new java.awt.Color(255, 204, 0));
-        botonAgregarinventario2.setText("Agregar");
-        botonAgregarinventario2.addActionListener(new java.awt.event.ActionListener() {
+        bAgregar.setBackground(new java.awt.Color(102, 102, 102));
+        bAgregar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        bAgregar.setForeground(new java.awt.Color(255, 204, 0));
+        bAgregar.setText("Agregar");
+        bAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarinventario2ActionPerformed(evt);
+                bAgregarActionPerformed(evt);
             }
         });
 
@@ -126,21 +128,21 @@ public class AgregarInventario extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cantidadTextfield))
+                                .addComponent(cantidadtxt))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(nombreTextfield)
-                                    .addComponent(consolaCombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(nombretxt)
+                                    .addComponent(consolatxt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(botonAgregarinventario2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(precioTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(preciotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(31, 31, 31)
                                         .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -157,22 +159,22 @@ public class AgregarInventario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addGap(53, 53, 53)
-                .addComponent(nombreTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(consolaCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(consolatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(cantidadTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cantidadtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(precioTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(preciotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAgregarinventario2)
+                    .addComponent(bAgregar)
                     .addComponent(botonVolver))
                 .addGap(51, 51, 51))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,14 +200,17 @@ public class AgregarInventario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonAgregarinventario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarinventario2ActionPerformed
+    private void bAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregarinventario2ActionPerformed
+        
+        
+    }//GEN-LAST:event_bAgregarActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         
-        Inventario inv =new Inventario();
-        inv.setVisible(true);
+          Inventario v=new Inventario();
+        ControladorVideojuego c=new ControladorVideojuego(v);
+        v.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonVolverActionPerformed
 
@@ -245,10 +250,10 @@ public class AgregarInventario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonAgregarinventario2;
+    public javax.swing.JButton bAgregar;
     private javax.swing.JButton botonVolver;
-    private javax.swing.JTextField cantidadTextfield;
-    private javax.swing.JComboBox<String> consolaCombobox;
+    public javax.swing.JTextField cantidadtxt;
+    public javax.swing.JComboBox<String> consolatxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -256,7 +261,7 @@ public class AgregarInventario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField nombreTextfield;
-    private javax.swing.JTextField precioTextfield;
+    public javax.swing.JTextField nombretxt;
+    public javax.swing.JTextField preciotxt;
     // End of variables declaration//GEN-END:variables
 }

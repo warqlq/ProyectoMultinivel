@@ -22,6 +22,24 @@ public class Videojuego {
         this.cantidad = cantidad;
         this.precio = precio;
     }
+
+    public Videojuego(String nombre, String consola, int cantidad, int precio) {
+        this.nombre = nombre;
+        this.consola = consola;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+
+    public Videojuego(String nombre, String consola) {
+        this.nombre = nombre;
+        this.consola = consola;
+    }
+
+    public Videojuego(int idVideojuego, int cantidad, int precio) {
+        this.idVideojuego = idVideojuego;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
     
     public int getIdVideojuego() {
         return idVideojuego;

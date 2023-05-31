@@ -89,6 +89,7 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         CC2Textfield1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         CC2Textfield1.setForeground(new java.awt.Color(255, 204, 0));
 
+        nombreTextfield5.setEditable(false);
         nombreTextfield5.setBackground(new java.awt.Color(102, 102, 102));
         nombreTextfield5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         nombreTextfield5.setForeground(new java.awt.Color(255, 204, 0));
@@ -98,6 +99,7 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 204, 0));
         jLabel7.setText("Nombre");
 
+        telefonoTextfield6.setEditable(false);
         telefonoTextfield6.setBackground(new java.awt.Color(102, 102, 102));
         telefonoTextfield6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         telefonoTextfield6.setForeground(new java.awt.Color(255, 204, 0));
@@ -107,9 +109,15 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 204, 0));
         jLabel8.setText("Correo");
 
+        correoTextfield7.setEditable(false);
         correoTextfield7.setBackground(new java.awt.Color(102, 102, 102));
         correoTextfield7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         correoTextfield7.setForeground(new java.awt.Color(255, 204, 0));
+        correoTextfield7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correoTextfield7ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -246,6 +254,10 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
          telefonoTextfield6.setText("");
          CC2Textfield1.setText("");
     }//GEN-LAST:event_botonVolver8ActionPerformed
+
+    private void correoTextfield7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correoTextfield7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_correoTextfield7ActionPerformed
 
     /**
      * @param args the command line arguments

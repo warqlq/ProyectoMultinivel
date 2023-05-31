@@ -4,17 +4,19 @@
  */
 package Visual;
 
+import Controller.ControladorVideojuego;
+
 /**
  *
  * @author simclub01
  */
 public class ActualizarVideojuego extends javax.swing.JFrame {
-
+    public int id;
     /**
      * Creates new form ActualizarVideojuego
      */
-    public ActualizarVideojuego() {
-        
+    public ActualizarVideojuego(int id) {
+        this.id=id;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -32,9 +34,9 @@ public class ActualizarVideojuego extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        precioTextfield = new javax.swing.JTextField();
-        cantidadTextfield = new javax.swing.JTextField();
-        botonAgregarinventario2 = new javax.swing.JButton();
+        preciotxt = new javax.swing.JTextField();
+        cantidadtxt = new javax.swing.JTextField();
+        actualizarb = new javax.swing.JButton();
         botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,21 +57,21 @@ public class ActualizarVideojuego extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 204, 0));
         jLabel5.setText("Precio");
 
-        precioTextfield.setBackground(new java.awt.Color(102, 102, 102));
-        precioTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        precioTextfield.setForeground(new java.awt.Color(255, 204, 0));
+        preciotxt.setBackground(new java.awt.Color(102, 102, 102));
+        preciotxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        preciotxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        cantidadTextfield.setBackground(new java.awt.Color(102, 102, 102));
-        cantidadTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        cantidadTextfield.setForeground(new java.awt.Color(255, 204, 0));
+        cantidadtxt.setBackground(new java.awt.Color(102, 102, 102));
+        cantidadtxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        cantidadtxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        botonAgregarinventario2.setBackground(new java.awt.Color(102, 102, 102));
-        botonAgregarinventario2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonAgregarinventario2.setForeground(new java.awt.Color(255, 204, 0));
-        botonAgregarinventario2.setText("Actualizar");
-        botonAgregarinventario2.addActionListener(new java.awt.event.ActionListener() {
+        actualizarb.setBackground(new java.awt.Color(102, 102, 102));
+        actualizarb.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        actualizarb.setForeground(new java.awt.Color(255, 204, 0));
+        actualizarb.setText("Actualizar");
+        actualizarb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarinventario2ActionPerformed(evt);
+                actualizarbActionPerformed(evt);
             }
         });
 
@@ -95,7 +97,7 @@ public class ActualizarVideojuego extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(128, 128, 128)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonAgregarinventario2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(actualizarb, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,8 +107,8 @@ public class ActualizarVideojuego extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cantidadTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(precioTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(cantidadtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(preciotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 157, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -117,14 +119,14 @@ public class ActualizarVideojuego extends javax.swing.JFrame {
                 .addGap(96, 96, 96)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(cantidadTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cantidadtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(precioTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(preciotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAgregarinventario2)
+                    .addComponent(actualizarb)
                     .addComponent(botonVolver))
                 .addGap(51, 51, 51))
         );
@@ -145,60 +147,36 @@ public class ActualizarVideojuego extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonAgregarinventario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarinventario2ActionPerformed
+    private void actualizarbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarbActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregarinventario2ActionPerformed
+        BuscarInventario aggIn =new BuscarInventario();
+        ControladorVideojuego c=new ControladorVideojuego(aggIn);
+        aggIn.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_actualizarbActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
 
-        Inventario inv =new Inventario();
-        inv.setVisible(true);
+        
+       BuscarInventario aggIn =new BuscarInventario();
+        ControladorVideojuego c=new ControladorVideojuego(aggIn);
+        aggIn.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonVolverActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ActualizarVideojuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ActualizarVideojuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ActualizarVideojuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ActualizarVideojuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ActualizarVideojuego().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonAgregarinventario2;
+    public javax.swing.JButton actualizarb;
     private javax.swing.JButton botonVolver;
-    private javax.swing.JTextField cantidadTextfield;
+    public javax.swing.JTextField cantidadtxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField precioTextfield;
+    public javax.swing.JTextField preciotxt;
     // End of variables declaration//GEN-END:variables
 }
