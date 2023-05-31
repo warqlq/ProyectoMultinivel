@@ -13,8 +13,16 @@ public class Videojuego {
     private String nombre;
     private String consola;
     private int cantidad;
-    private double precio;
+    private int precio;
 
+    public Videojuego(int idVideojuego, String nombre, String consola, int cantidad, int precio) {
+        this.idVideojuego = idVideojuego;
+        this.nombre = nombre;
+        this.consola = consola;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+    
     public int getIdVideojuego() {
         return idVideojuego;
     }
@@ -50,11 +58,11 @@ public class Videojuego {
         this.cantidad = cantidad;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
     

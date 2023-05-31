@@ -43,8 +43,6 @@ public class BuscarInventario extends javax.swing.JFrame {
         consolaCombobox1 = new javax.swing.JComboBox<>();
         botonBuscarinventario1 = new javax.swing.JButton();
         nombreTextfield2 = new javax.swing.JTextField();
-        botonActualizar = new javax.swing.JButton();
-        botonEliminar = new javax.swing.JButton();
         botonVolver = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -116,16 +114,6 @@ public class BuscarInventario extends javax.swing.JFrame {
         nombreTextfield2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         nombreTextfield2.setForeground(new java.awt.Color(255, 204, 0));
 
-        botonActualizar.setBackground(new java.awt.Color(102, 102, 102));
-        botonActualizar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonActualizar.setForeground(new java.awt.Color(255, 204, 0));
-        botonActualizar.setText("Actualizar");
-
-        botonEliminar.setBackground(new java.awt.Color(102, 102, 102));
-        botonEliminar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonEliminar.setForeground(new java.awt.Color(255, 204, 0));
-        botonEliminar.setText("Eliminar");
-
         botonVolver.setBackground(new java.awt.Color(102, 102, 102));
         botonVolver.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonVolver.setForeground(new java.awt.Color(255, 204, 0));
@@ -159,14 +147,10 @@ public class BuscarInventario extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(botonBuscarinventario1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(16, 16, 16))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addGap(191, 191, 191))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,12 +171,9 @@ public class BuscarInventario extends javax.swing.JFrame {
                         .addComponent(botonBuscarinventario1)))
                 .addGap(52, 52, 52)
                 .addComponent(nombreTextfield2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonActualizar)
-                    .addComponent(botonEliminar)
-                    .addComponent(botonVolver))
-                .addGap(43, 43, 43))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addComponent(botonVolver)
+                .addGap(34, 34, 34))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -252,10 +233,8 @@ public class BuscarInventario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonActualizar;
     private javax.swing.JButton botonBuscarinventario;
     private javax.swing.JButton botonBuscarinventario1;
-    private javax.swing.JButton botonEliminar;
     private javax.swing.JButton botonVolver;
     private javax.swing.JComboBox<String> consolaCombobox;
     private javax.swing.JComboBox<String> consolaCombobox1;

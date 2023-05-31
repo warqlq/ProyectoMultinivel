@@ -33,7 +33,7 @@ public class ConexionBD {
              
              Class.forName("com.mysql.cj.jdbc.Driver");
              conexion= DriverManager.getConnection(URL,USERNAME,PASSWORD);
-             
+             System.out.println("Conexion con la Base de datos exitosa");
              return conexion;
          }catch(ClassNotFoundException | SQLException e){
              System.out.println(e);
