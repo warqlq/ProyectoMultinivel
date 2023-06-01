@@ -60,6 +60,7 @@ public class ClienteDao implements DaoInterfaceCliente{
               cliente.setTelefono(Long.parseLong(consulta.getString("telefono")));
               JOptionPane.showMessageDialog(null, "Registro encontrado");
             }else{
+                
                 JOptionPane.showMessageDialog(null, "No se encuentra registrado");
             }
             

@@ -10,12 +10,12 @@ import Controller.ControladorVideojuego;
  *
  * @author simclub01
  */
-public class RevisarDisponibilidad extends javax.swing.JFrame {
+public class Venta extends javax.swing.JFrame {
 
     /**
      * Creates new form RevisarDisponibilidad
      */
-    public RevisarDisponibilidad() {
+    public Venta() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("Revisar Disponibilidad");
@@ -39,14 +39,14 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        consolaCombobox1 = new javax.swing.JComboBox<>();
-        nombreTextfield = new javax.swing.JTextField();
-        nombreTextfield2 = new javax.swing.JTextField();
-        botonBuscarinventario3 = new javax.swing.JButton();
-        botonVolver = new javax.swing.JButton();
+        consolatxt = new javax.swing.JComboBox<>();
+        cantidadtxt = new javax.swing.JTextField();
+        cctxt = new javax.swing.JTextField();
+        buscarB = new javax.swing.JButton();
+        volverB = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        nombreTextfield3 = new javax.swing.JTextField();
-        botonBuscarinventario4 = new javax.swing.JButton();
+        nombretxt = new javax.swing.JTextField();
+        generarB = new javax.swing.JButton();
 
         consolaCombobox.setBackground(new java.awt.Color(102, 102, 102));
         consolaCombobox.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -90,36 +90,36 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 204, 0));
         jLabel4.setText("Cantidad");
 
-        consolaCombobox1.setBackground(new java.awt.Color(102, 102, 102));
-        consolaCombobox1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        consolaCombobox1.setForeground(new java.awt.Color(255, 204, 0));
-        consolaCombobox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PS4", "Xbox", "Nintendo Switch" }));
+        consolatxt.setBackground(new java.awt.Color(102, 102, 102));
+        consolatxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        consolatxt.setForeground(new java.awt.Color(255, 204, 0));
+        consolatxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PS4", "Xbox", "Nintendo Switch" }));
 
-        nombreTextfield.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield.setForeground(new java.awt.Color(255, 204, 0));
+        cantidadtxt.setBackground(new java.awt.Color(102, 102, 102));
+        cantidadtxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        cantidadtxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        nombreTextfield2.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield2.setForeground(new java.awt.Color(255, 204, 0));
+        cctxt.setBackground(new java.awt.Color(102, 102, 102));
+        cctxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        cctxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        botonBuscarinventario3.setBackground(new java.awt.Color(102, 102, 102));
-        botonBuscarinventario3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonBuscarinventario3.setForeground(new java.awt.Color(255, 204, 0));
-        botonBuscarinventario3.setText("Buscar CC");
-        botonBuscarinventario3.addActionListener(new java.awt.event.ActionListener() {
+        buscarB.setBackground(new java.awt.Color(102, 102, 102));
+        buscarB.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        buscarB.setForeground(new java.awt.Color(255, 204, 0));
+        buscarB.setText("Buscar CC");
+        buscarB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonBuscarinventario3ActionPerformed(evt);
+                buscarBActionPerformed(evt);
             }
         });
 
-        botonVolver.setBackground(new java.awt.Color(102, 102, 102));
-        botonVolver.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonVolver.setForeground(new java.awt.Color(255, 204, 0));
-        botonVolver.setText("Volver");
-        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+        volverB.setBackground(new java.awt.Color(102, 102, 102));
+        volverB.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        volverB.setForeground(new java.awt.Color(255, 204, 0));
+        volverB.setText("Volver");
+        volverB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVolverActionPerformed(evt);
+                volverBActionPerformed(evt);
             }
         });
 
@@ -128,17 +128,17 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 204, 0));
         jLabel5.setText("Nombre del Videojuego");
 
-        nombreTextfield3.setBackground(new java.awt.Color(102, 102, 102));
-        nombreTextfield3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        nombreTextfield3.setForeground(new java.awt.Color(255, 204, 0));
+        nombretxt.setBackground(new java.awt.Color(102, 102, 102));
+        nombretxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        nombretxt.setForeground(new java.awt.Color(255, 204, 0));
 
-        botonBuscarinventario4.setBackground(new java.awt.Color(102, 102, 102));
-        botonBuscarinventario4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        botonBuscarinventario4.setForeground(new java.awt.Color(255, 204, 0));
-        botonBuscarinventario4.setText("Generar Venta");
-        botonBuscarinventario4.addActionListener(new java.awt.event.ActionListener() {
+        generarB.setBackground(new java.awt.Color(102, 102, 102));
+        generarB.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        generarB.setForeground(new java.awt.Color(255, 204, 0));
+        generarB.setText("Generar Venta");
+        generarB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonBuscarinventario4ActionPerformed(evt);
+                generarBActionPerformed(evt);
             }
         });
 
@@ -151,39 +151,38 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(278, 332, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(58, 58, 58)
-                                .addComponent(nombreTextfield3))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(98, 98, 98)
-                                .addComponent(consolaCombobox1, 0, 132, Short.MAX_VALUE))
+                                .addGap(143, 143, 143)
+                                .addComponent(consolatxt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(143, 143, 143)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(98, 98, 98))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(botonBuscarinventario4, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(29, 29, 29)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nombreTextfield)
-                                    .addComponent(nombreTextfield2)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(190, 190, 190)))
-                .addGap(88, 88, 88))
+                                    .addComponent(cctxt)
+                                    .addComponent(cantidadtxt)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(generarB, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(volverB, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(71, 71, 71)))
+                        .addGap(28, 28, 28))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonBuscarinventario3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65))
+                .addComponent(buscarB, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,25 +191,25 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
                 .addGap(68, 68, 68)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(nombreTextfield3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(consolaCombobox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(consolatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(nombreTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cantidadtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(nombreTextfield2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cctxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(botonBuscarinventario3)
+                .addComponent(buscarB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonVolver)
-                    .addComponent(botonBuscarinventario4))
+                    .addComponent(volverB)
+                    .addComponent(generarB))
                 .addGap(37, 37, 37))
         );
 
@@ -231,20 +230,20 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+    private void volverBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverBActionPerformed
         
         PantallaPrincipal ven =new PantallaPrincipal();
         ven.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_botonVolverActionPerformed
+    }//GEN-LAST:event_volverBActionPerformed
 
-    private void botonBuscarinventario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventario3ActionPerformed
+    private void buscarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonBuscarinventario3ActionPerformed
+    }//GEN-LAST:event_buscarBActionPerformed
 
-    private void botonBuscarinventario4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventario4ActionPerformed
+    private void generarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonBuscarinventario4ActionPerformed
+    }//GEN-LAST:event_generarBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,20 +262,21 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RevisarDisponibilidad.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RevisarDisponibilidad.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RevisarDisponibilidad.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RevisarDisponibilidad.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RevisarDisponibilidad().setVisible(true);
+                new Venta().setVisible(true);
             }
         });
     }
@@ -284,20 +284,20 @@ public class RevisarDisponibilidad extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonBuscarinventario1;
     private javax.swing.JButton botonBuscarinventario2;
-    private javax.swing.JButton botonBuscarinventario3;
-    private javax.swing.JButton botonBuscarinventario4;
-    private javax.swing.JButton botonVolver;
+    public javax.swing.JButton buscarB;
+    public javax.swing.JTextField cantidadtxt;
+    public javax.swing.JTextField cctxt;
     private javax.swing.JComboBox<String> consolaCombobox;
-    private javax.swing.JComboBox<String> consolaCombobox1;
+    public javax.swing.JComboBox<String> consolatxt;
+    public javax.swing.JButton generarB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombreTextfield;
     private javax.swing.JTextField nombreTextfield1;
-    private javax.swing.JTextField nombreTextfield2;
-    private javax.swing.JTextField nombreTextfield3;
+    public javax.swing.JTextField nombretxt;
+    public javax.swing.JButton volverB;
     // End of variables declaration//GEN-END:variables
 }

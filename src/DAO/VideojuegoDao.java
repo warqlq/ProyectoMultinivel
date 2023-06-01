@@ -95,6 +95,8 @@ public class VideojuegoDao implements DaoInterfaceVideojuego {
         
         return videojuego1;
     }
+    
+   
 
     @Override
     public ArrayList<Videojuego> buscarTodo() {
@@ -125,6 +127,52 @@ public class VideojuegoDao implements DaoInterfaceVideojuego {
             System.out.println("Error" + ex.getMessage());
         }
         return lista;
+    }
+
+    /*@Override
+    public int disponibilidad(Videojuego videojuego) {
+         Videojuego videojuego1=null;
+        String sql = "Select * from videojuego where nombre = ? AND consola = ? AND cantidad>=? ";
+         try{
+            Connection conectar = conexion.conectar();
+            PreparedStatement insertar = conectar.prepareStatement(sql);
+             insertar.setString(1, videojuego.getNombre()+ "");
+             insertar.setString(2, videojuego.getConsola()+ "");
+             rs=insertar.executeQuery();
+                if (rs.next()){
+                videojuego1 = new Videojuego(
+                   rs.getInt("idVideojuego"),
+                   rs.getString("nombre"),
+                   rs.getString("consola"),
+                   rs.getInt("cantidad"),
+                   rs.getInt("precio"));
+            }
+            
+            rs.close();
+            conectar.close();
+            
+        }catch(SQLException e){
+            System.out.println("Error al buscar Videojuego"+e);
+        }
+        
+        return videojuego1.getCantidad();
+    }*/
+
+    @Override
+    public void actualizarCantidad(Videojuego videojuego) {
+        String sql = "update videojuego set cantidad = ?  where nombre = ? AND consola = ? ";
+       
+        try{
+            Connection conectar = conexion.conectar();
+            PreparedStatement insertar = conectar.prepareStatement(sql);
+            insertar.setInt(1,videojuego.getCantidad());
+            insertar.setString(2,videojuego.getNombre());
+            insertar.setString(3,videojuego.getConsola());
+            insertar.executeUpdate();
+            
+        }catch(SQLException e){
+            System.out.println("Error al actualizar Videojuego"+e);
+        }
     }
     
 }

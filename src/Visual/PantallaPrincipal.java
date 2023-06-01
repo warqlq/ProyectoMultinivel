@@ -4,6 +4,7 @@
  */
 package Visual;
 
+import Controller.ControladorVenta;
 import Controller.ControladorVideojuego;
 import static java.lang.System.exit;
 
@@ -154,7 +155,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void botonVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVentaActionPerformed
 
 
-        RevisarDisponibilidad rd=new RevisarDisponibilidad(); 
+        Venta rd=new Venta(); 
+        ControladorVenta c=new ControladorVenta(rd);
         rd.setVisible(true);
         this.dispose(); 
         

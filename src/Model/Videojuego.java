@@ -35,6 +35,12 @@ public class Videojuego {
         this.consola = consola;
     }
 
+    public Videojuego(String nombre, String consola, int cantidad) {
+        this.nombre = nombre;
+        this.consola = consola;
+        this.cantidad = cantidad;
+    }
+    
     public Videojuego(int idVideojuego, int cantidad, int precio) {
         this.idVideojuego = idVideojuego;
         this.cantidad = cantidad;

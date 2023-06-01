@@ -14,8 +14,10 @@ import java.util.ArrayList;
  */
 public interface DaoInterfaceVideojuego {
     public void actualizar(Videojuego videojuego);
+    public void actualizarCantidad(Videojuego videojuego);
     public void crear(Videojuego videojuego);
     public void eleminar(int idVideojuego);
     public Videojuego buscar(Videojuego videojuego);
+   // public int disponibilidad(Videojuego videojuego);
     public ArrayList<Videojuego> buscarTodo();
 }
