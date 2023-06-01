@@ -227,32 +227,15 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_botonVolver7ActionPerformed
 
     private void botonBuscarinventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarinventarioActionPerformed
-        
-        ClienteDao cliente_dao = new ClienteDao();
-        Cliente cliente =new Cliente();
-       
-        if(CC2Textfield1.getText().equals("")){
-           JOptionPane.showMessageDialog(null, "Ingrese el numero de cedula");
-        
-        }else{
-         long cc= Long.parseLong(CC2Textfield1.getText()); 
-       cliente.setCedula(cc);
-        cliente_dao.buscar(cliente);
-         
-        nombreTextfield5.setText(cliente.getNombre());
-        correoTextfield7.setText(cliente.getCorreoElectronico());
-        telefonoTextfield6.setText(String.valueOf(cliente.getTelefono()));
-        
-        }
-        
+     
     }//GEN-LAST:event_botonBuscarinventarioActionPerformed
 
     private void botonVolver8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver8ActionPerformed
-       
-        nombreTextfield5.setText("");
-         correoTextfield7.setText("");
-         telefonoTextfield6.setText("");
-         CC2Textfield1.setText("");
+     BuscarClienteCliente v=new BuscarClienteCliente();
+           ControladorCliente c=new ControladorCliente(v);
+           v.setVisible(true);
+             this.dispose();       
+        
     }//GEN-LAST:event_botonVolver8ActionPerformed
 
     private void correoTextfield7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correoTextfield7ActionPerformed

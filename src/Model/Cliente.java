@@ -14,6 +14,21 @@ public class Cliente {
     private long cedula;
     private long telefono;
 
+    public Cliente() {
+    }
+
+   
+    public Cliente(String nombre, String correoElectronico, long cedula, long telefono) {
+        this.nombre = nombre;
+        this.correoElectronico = correoElectronico;
+        this.cedula = cedula;
+        this.telefono = telefono;
+    }
+
+    
+    
+    
+    
     public String getNombre() {
         return nombre;
     }

@@ -20,6 +20,9 @@ import java.util.ArrayList;
 public class VideojuegoDao implements DaoInterfaceVideojuego {
     ConexionBD conexion = ConexionBD.getInstance();
      ResultSet rs=null;
+     
+     
+     
     @Override
     public void actualizar(Videojuego videojuego) {
         String sql = "update videojuego set cantidad = ?, precio = ? where idVideojuego = ?";

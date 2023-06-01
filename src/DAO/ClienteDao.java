@@ -8,6 +8,7 @@ package DAO;
 import Conexion.ConexionBD;
 import Model.Cliente;
 import java.sql.*;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +18,7 @@ import javax.swing.JOptionPane;
 public class ClienteDao implements DaoInterfaceCliente{
  
     ConexionBD conexion = ConexionBD.getInstance();
-  
+    ResultSet rs=null;
     
    /* @Override
     public void actualizar(Cliente cliente) {
@@ -32,17 +33,30 @@ public class ClienteDao implements DaoInterfaceCliente{
         try{
             Connection conectar = conexion.conectar();
             PreparedStatement insertar = conectar.prepareStatement("insert into cliente values (?,?,?,?)");
+            
+            
+            ResultSet probar = insertar.executeQuery("select * from cliente where cedula like '"+cliente.getCedula()+"'");
+            
+            if(probar.next()){
+                JOptionPane.showMessageDialog(null, "Cliente ya registrado");
+               
+            }else{
             insertar.setLong(1,cliente.getCedula());
             insertar.setString(2,cliente.getNombre());
             insertar.setString(3,cliente.getCorreoElectronico());
             insertar.setLong(4,cliente.getTelefono());
             insertar.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Registro exitoso");
+           
+            }
+            
+           
             
         }catch(SQLException e){
             System.out.println("error:"+e);
         }
         
-        
+       
     }
 
     @Override
@@ -69,8 +83,37 @@ public class ClienteDao implements DaoInterfaceCliente{
         
         }
     }
+  
+    @Override
+    public ArrayList<Cliente> MostrarTodo() {
+            ArrayList<Cliente> lista1 = new ArrayList<>();
+             String sql = "Select * from cliente";
+           try {
 
-    
+               Connection conectar = conexion.conectar();
+               PreparedStatement insertar = conectar.prepareStatement(sql);
+                ResultSet resultSet;
+                rs = insertar.executeQuery(sql);
+
+                while (rs.next()) {
+                     Cliente cliente1 = new Cliente(
+                       rs.getString("nombre"),
+                       rs.getString("correoElectronico"),
+                       rs.getLong("cedula"),
+                       rs.getLong("telefono"));
+                    lista1.add(cliente1);
+                }
+
+                rs.close();
+                conectar.close();
+
+
+            } catch(SQLException ex){
+                System.out.println("Error" + ex.getMessage());
+            }
+            return lista1;
+        }
+
     
     /*@Override
     public void eleminar(Cliente cliente) {

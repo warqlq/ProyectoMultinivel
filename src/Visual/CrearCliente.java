@@ -215,28 +215,7 @@ public class CrearCliente extends javax.swing.JFrame {
     private void botonAgregarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarclienteActionPerformed
         
         
-        
-        /*
-        ClienteDao cliente_dao = new ClienteDao();
-        Cliente cliente= new Cliente();
-        
-        String nombre = nombreTextfield.getText();
-       long cc = Long.parseLong(CCTextfield1.getText());
-       long telefono = Long.parseLong(telefonoTextfield2.getText());
-       String correo = correoTextfield3.getText();
-       
-       cliente.setCedula(cc);
-       cliente.setNombre(nombre);
-       cliente.setTelefono(telefono);
-       cliente.setCorreoElectronico(correo);
-       
-       cliente_dao.crear(cliente);
-        JOptionPane.showMessageDialog(null, "Registro exitoso");
-        nombreTextfield.setText("");
-       CCTextfield1.setText("");
-        telefonoTextfield2.setText("");
-        correoTextfield3.setText("");
-        */
+     
     }//GEN-LAST:event_botonAgregarclienteActionPerformed
 
     /**

@@ -5,6 +5,7 @@
 package DAO;
 
 import Model.Cliente;
+
 import java.util.ArrayList;
 
 
@@ -13,5 +14,6 @@ public interface DaoInterfaceCliente {
     public void crear(Cliente cliente);
    // public void eleminar(Cliente cliente);
     public void buscar(Cliente cliente);
+    public ArrayList<Cliente> MostrarTodo();
    //public ArrayList<Cliente> findAll();
 }
