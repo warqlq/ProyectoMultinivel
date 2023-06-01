@@ -207,7 +207,7 @@ public class CrearCliente extends javax.swing.JFrame {
 
     private void botonVolver5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver5ActionPerformed
         
-       Venta ven =new Venta();
+       Clientes ven =new Clientes();
         ven.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonVolver5ActionPerformed

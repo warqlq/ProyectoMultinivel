@@ -152,9 +152,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botonInventarioActionPerformed
 
     private void botonVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVentaActionPerformed
-        
-        Venta ve=new Venta();
-        ve.setVisible(true);
+
+
+        RevisarDisponibilidad rd=new RevisarDisponibilidad(); 
+        rd.setVisible(true);
         this.dispose(); 
         
         
