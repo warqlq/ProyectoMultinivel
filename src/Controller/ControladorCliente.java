@@ -35,6 +35,7 @@ public class ControladorCliente implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==vistacrear.botonAgregarcliente){
+            JOptionPane.showMessageDialog(null, "PRUEBA");
             crear();
         }
     }

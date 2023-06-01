@@ -4,6 +4,8 @@
  */
 package Visual;
 
+import Controller.ControladorCliente;
+
 /**
  *
  * @author simclub01
@@ -151,9 +153,10 @@ public class Clientes extends javax.swing.JFrame {
 
     private void botonBuscarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarclienteActionPerformed
         
-        BuscarClienteCliente buscc =new BuscarClienteCliente();
-        buscc.setVisible(true);
-        this.dispose();
+        BuscarClienteCliente v=new BuscarClienteCliente();
+       ControladorCliente c=new ControladorCliente(v);
+       v.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_botonBuscarclienteActionPerformed
 
     private void botonVolver7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver7ActionPerformed

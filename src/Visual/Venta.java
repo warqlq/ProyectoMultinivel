@@ -4,6 +4,8 @@
  */
 package Visual;
 
+import Controller.ControladorCliente;
+
 /**
  *
  * @author simclub01
@@ -182,9 +184,12 @@ public class Venta extends javax.swing.JFrame {
 
     private void botonCrearclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearclienteActionPerformed
        
-        CrearCliente crec =new CrearCliente();
-        crec.setVisible(true);
-        this.dispose();
+        CrearCliente v=new CrearCliente();
+       ControladorCliente c=new ControladorCliente(v);
+       v.setVisible(true);
+         this.dispose();
+        
+        
     }//GEN-LAST:event_botonCrearclienteActionPerformed
 
     private void botonBuscarcliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarcliente1ActionPerformed
