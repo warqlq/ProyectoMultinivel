@@ -39,7 +39,6 @@ public class Clientes extends javax.swing.JFrame {
         botonDescargarreporte = new javax.swing.JButton();
         botonVolver7 = new javax.swing.JButton();
         botonBuscarcliente1 = new javax.swing.JButton();
-        RefrescarBTN = new javax.swing.JButton();
         EliminarBTN = new javax.swing.JButton();
 
         botonBuscarinventario.setBackground(new java.awt.Color(102, 102, 102));
@@ -117,16 +116,6 @@ public class Clientes extends javax.swing.JFrame {
             }
         });
 
-        RefrescarBTN.setBackground(new java.awt.Color(102, 102, 102));
-        RefrescarBTN.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        RefrescarBTN.setForeground(new java.awt.Color(255, 204, 0));
-        RefrescarBTN.setText("Refrescar Tabla");
-        RefrescarBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RefrescarBTNActionPerformed(evt);
-            }
-        });
-
         EliminarBTN.setBackground(new java.awt.Color(102, 102, 102));
         EliminarBTN.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         EliminarBTN.setForeground(new java.awt.Color(255, 204, 0));
@@ -142,21 +131,17 @@ public class Clientes extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(115, 115, 115)
+                .addGap(66, 66, 66)
                 .addComponent(botonBuscarcliente)
-                .addGap(79, 79, 79)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(RefrescarBTN)
-                        .addGap(77, 77, 77)
-                        .addComponent(EliminarBTN))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(botonBuscarcliente1)
-                        .addGap(62, 62, 62)
-                        .addComponent(botonDescargarreporte)
-                        .addGap(77, 77, 77)
-                        .addComponent(botonVolver7)))
-                .addGap(24, 24, 24))
+                .addGap(50, 50, 50)
+                .addComponent(botonBuscarcliente1)
+                .addGap(35, 35, 35)
+                .addComponent(botonDescargarreporte)
+                .addGap(52, 52, 52)
+                .addComponent(EliminarBTN)
+                .addGap(46, 46, 46)
+                .addComponent(botonVolver7)
+                .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -172,16 +157,13 @@ public class Clientes extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EliminarBTN)
-                    .addComponent(RefrescarBTN))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonBuscarcliente)
                     .addComponent(botonBuscarcliente1)
                     .addComponent(botonVolver7)
-                    .addComponent(botonDescargarreporte))
+                    .addComponent(botonDescargarreporte)
+                    .addComponent(EliminarBTN))
                 .addGap(46, 46, 46))
         );
 
@@ -223,15 +205,6 @@ public class Clientes extends javax.swing.JFrame {
          this.dispose();
     }//GEN-LAST:event_botonBuscarcliente1ActionPerformed
 
-    private void RefrescarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefrescarBTNActionPerformed
-       
-       /* Clientes aggIn =new Clientes();
-        ControladorCliente c=new ControladorCliente(aggIn);
-        aggIn.setVisible(true);
-        this.dispose();
-        */
-    }//GEN-LAST:event_RefrescarBTNActionPerformed
-
     private void EliminarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBTNActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EliminarBTNActionPerformed
@@ -254,7 +227,6 @@ public class Clientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton EliminarBTN;
-    public javax.swing.JButton RefrescarBTN;
     private javax.swing.JButton botonBuscarcliente;
     private javax.swing.JButton botonBuscarcliente1;
     private javax.swing.JButton botonBuscarinventario;

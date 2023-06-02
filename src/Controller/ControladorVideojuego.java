@@ -34,7 +34,6 @@ public class ControladorVideojuego implements ActionListener {
     public ControladorVideojuego(Inventario v){
         
         this.vistaInventario=v;
-        this.vistaInventario.refrescar.addActionListener(this);
         this.vistaInventario.botonEliminar.addActionListener(this);
         mostrarTabla(vistaInventario.tablaInventario);
     }
@@ -110,6 +109,9 @@ public class ControladorVideojuego implements ActionListener {
         dao.crear(videojuego);
         JOptionPane.showMessageDialog(null, "Registro exitoso");
         
+        vistaAgregar.nombretxt.setText("");
+        vistaAgregar.cantidadtxt.setText("");
+        vistaAgregar.preciotxt.setText("");
         
     }
     
@@ -162,11 +164,7 @@ public class ControladorVideojuego implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==vistaInventario.refrescar){
-            limpiarTabla();
-            mostrarTabla(vistaInventario.tablaInventario);
-            
-        }
+        
         if(e.getSource()==vistaInventario.botonEliminar){
            eliminar();
            limpiarTabla();

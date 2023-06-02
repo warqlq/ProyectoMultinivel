@@ -122,7 +122,6 @@ public class ClienteDao implements DaoInterfaceCliente{
     @Override
     public void eliminar(Long cedula) {
         String sql="delete from cliente where cedula ="+cedula;
-        System.out.println("PRUBEA: "+cedula);
         try{
             Connection conectar = conexion.conectar();
                PreparedStatement borrar = conectar.prepareStatement(sql);        

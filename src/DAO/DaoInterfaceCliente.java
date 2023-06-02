@@ -10,10 +10,8 @@ import java.util.ArrayList;
 
 
 public interface DaoInterfaceCliente {
-    //public void actualizar(Cliente cliente);
     public void crear(Cliente cliente);
     public void eliminar(Long cedula);
     public void buscar(Cliente cliente);
     public ArrayList<Cliente> MostrarTodo();
-   //public ArrayList<Cliente> findAll();
 }

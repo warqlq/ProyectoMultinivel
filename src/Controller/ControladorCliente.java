@@ -11,9 +11,15 @@ import Visual.CrearCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -43,7 +49,6 @@ public class ControladorCliente implements ActionListener{
     
     public ControladorCliente(Clientes b) {
         this.vistacliente = b;
-        this.vistacliente.RefrescarBTN.addActionListener(this);
         this.vistacliente.EliminarBTN.addActionListener(this);
         this.vistacliente.botonDescargarreporte.addActionListener(this);
         mostrarTabla1(vistacliente.tablaClientes);
@@ -59,12 +64,7 @@ public class ControladorCliente implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         
-        if(e.getSource()==vistacliente.RefrescarBTN){
-            //JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
-            limpiarTabla();
-            mostrarTabla1(vistacliente.tablaClientes);
-           
-        }
+      
         if(e.getSource()==vistacrear.botonAgregarcliente){
             crear();
         }
@@ -80,9 +80,9 @@ public class ControladorCliente implements ActionListener{
         }
          
           if(e.getSource()==vistacliente.botonDescargarreporte){       
-              
-             
-              JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
+              limpiarTabla();
+             mostrarTabla1(vistacliente.tablaClientes);
+             // JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
               descargarCSV();
               
              
@@ -92,10 +92,16 @@ public class ControladorCliente implements ActionListener{
     }
     
     
-    /*
     
-    public void GenerarCSV(int id,String fecha,String hora,String tipoGasolina,float galones,int precioTotal,String nombreArchivo){
-        String[] datos = {String.valueOf(id),fecha,hora,tipoGasolina, String.valueOf(galones),String.valueOf(precioTotal)};
+    
+    public void descargarCSV(){
+     String nombreArchivo;
+         Date currentDate = new Date();
+        SimpleDateFormat datee = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        String hora_fecha = datee.format(currentDate);
+
+      
+         nombreArchivo = "Reporte_" + hora_fecha + ".csv";
           Path path = Paths.get(nombreArchivo);
  
         boolean archivoExiste = Files.exists(path);
@@ -108,8 +114,13 @@ public class ControladorCliente implements ActionListener{
                 //fileWriter.append("Id,Nombre Mascota ,Especie,Nombre Dueño,Descripción,Diagnostico\n");
             }
            
-            fileWriter.append(String.join(",", datos));
-            fileWriter.append("\n");
+           for(int i=0;i<vistacliente.tablaClientes.getRowCount();i++){
+                
+                String texto = vistacliente.tablaClientes.getValueAt(i,0).toString()+","+vistacliente.tablaClientes.getValueAt(i,1).toString()+","+vistacliente.tablaClientes.getValueAt(i,2).toString()
+                                +","+vistacliente.tablaClientes.getValueAt(i,3).toString();
+                fileWriter.append(texto);
+                fileWriter.append("\n");
+                }
             fileWriter.flush();
             fileWriter.close();
             
@@ -117,36 +128,11 @@ public class ControladorCliente implements ActionListener{
             e.printStackTrace();
         }
      
-        
     }
-    */
-    
-    public void descargarCSV(){
-    
-        ArrayList<Cliente>lista3=dao.MostrarTodo();
-      
-       // String pru=lista3.toString();
         
-       
         
-    try {
-            try ( BufferedWriter escribir = new BufferedWriter(new FileWriter("ReporteClientes.csv", true))) {
-                
-                 String[] datos =new String[vistacliente.tablaClientes.getColumnCount()];
-                 
-                String texto = vistacliente.tablaClientes.getValueAt(0,0).toString()+vistacliente.tablaClientes.getValueAt(0,1).toString();
-                escribir.write(texto);
-                escribir.newLine();
-                escribir.close();
-                JOptionPane.showMessageDialog(null, "Registro exitoso del csv.");
-            }
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Ha ocurrido un error al guardar los datos del csv.");
-        }
-    
-    
-    }
-    
+        
+   
     
     
     
@@ -159,8 +145,12 @@ public class ControladorCliente implements ActionListener{
                  JOptionPane.showMessageDialog(null, "Seleccione un cliente");
              }else{
                  long cc= Long.parseLong((String)vistacliente.tablaClientes.getValueAt(fila,0).toString());
-                 dao.eliminar(cc);
-                 JOptionPane.showMessageDialog(null, "Usuario eliminado");
+                 int respuesta= JOptionPane.showConfirmDialog(null, "¿Esta seguro de elimiar el cliente?", "Eliminar", JOptionPane.YES_NO_OPTION);
+                 if(respuesta==JOptionPane.YES_OPTION){
+                     dao.eliminar(cc);
+                    JOptionPane.showMessageDialog(null, "Usuario eliminado");
+                 }
+                 
              }
     
     

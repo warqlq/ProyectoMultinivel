@@ -40,7 +40,7 @@ public class ControladorVenta implements ActionListener  {
         
         daoVen.crear(videojuego1, cli);
         daoVid.actualizarCantidad(videojuego2);
-        JOptionPane.showMessageDialog(null, "Se genero su venta de"+videojuego1.getNombre());
+        JOptionPane.showMessageDialog(null, "Se genero su venta de: "+videojuego1.getNombre());
     }
      
     public void validarVenta(){
@@ -82,8 +82,6 @@ public class ControladorVenta implements ActionListener  {
         cli.setCedula(cc);
         daoCli.buscar(cli);
         vistaVenta.cctxt.setText(String.valueOf(cli.getCedula()));
-       
-        vistaVenta.cctxt.setEditable(false);
        
         
         }
