@@ -33,7 +33,7 @@ public class ConexionBD {
              
              Class.forName("com.mysql.cj.jdbc.Driver");
              conexion= DriverManager.getConnection(URL,USERNAME,PASSWORD);
-             System.out.println("Conexion con la Base de datos exitosa");
+             
              return conexion;
          }catch(ClassNotFoundException | SQLException e){
              System.out.println(e);
@@ -51,39 +51,5 @@ public class ConexionBD {
         return instancia;
     
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    private String driver="com.mysql.cj.jdbc.Driver";
-    String url = "jdbc:mysql://localhost:3306/tienda";
-    private String usuario="root";
-    private String contraseña="";
-    public Connection conexion;
 
-    public ConexionBD() {
-        
-        try{
-             Class.forName(driver);
-        
-        conexion=DriverManager.getConnection(url, usuario, contraseña);
-        System.out.println("la base de datos fue conectada");
-        }catch(Exception e){
-            System.out.println("Erorr al conectar la base de datos");
-        }
-       
-    }
-
-    public Connection getConexion() {
-        return conexion;
-    }
-
-    
-    */
-    
 }

@@ -40,10 +40,11 @@ public class ControladorVenta implements ActionListener  {
         
         daoVen.crear(videojuego1, cli);
         daoVid.actualizarCantidad(videojuego2);
+        JOptionPane.showMessageDialog(null, "Se genero su venta de"+videojuego1.getNombre());
     }
      
     public void validarVenta(){
-        if(vistaVenta.nombretxt.getText().equals("") || vistaVenta.cantidadtxt.getText().equals("") ){
+        if(vistaVenta.nombretxt.getText().equals("") || vistaVenta.cantidadtxt.getText().equals("") ||vistaVenta.cctxt.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Ingrese datos validos");
         }
         else if(Integer.valueOf(vistaVenta.cantidadtxt.getText())<=0){

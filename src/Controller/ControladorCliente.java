@@ -33,6 +33,7 @@ public class ControladorCliente implements ActionListener{
     public ControladorCliente(CrearCliente v) {
         this.vistacrear = v;
         this.vistacrear.botonAgregarcliente.addActionListener(this);
+        
     }
    
    public ControladorCliente(BuscarClienteCliente b) {
@@ -45,17 +46,24 @@ public class ControladorCliente implements ActionListener{
         this.vistacliente.RefrescarBTN.addActionListener(this);
         this.vistacliente.EliminarBTN.addActionListener(this);
         this.vistacliente.botonDescargarreporte.addActionListener(this);
+        mostrarTabla1(vistacliente.tablaClientes);
     }
    
-   
+    public void limpiarTabla(){
+        for(int i=0;i<vistacliente.tablaClientes.getRowCount();i++){
+            modelo2.removeRow(i);
+            i=i-1;
+        }
+    }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         
         if(e.getSource()==vistacliente.RefrescarBTN){
             //JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
+            limpiarTabla();
             mostrarTabla1(vistacliente.tablaClientes);
-            vistacliente.RefrescarBTN.setEnabled(false);
+           
         }
         if(e.getSource()==vistacrear.botonAgregarcliente){
             crear();
@@ -140,14 +148,7 @@ public class ControladorCliente implements ActionListener{
     }
     
     
-    public void limpiarTabla(){
     
-        for(int i=0;i<vistacliente.tablaClientes.getRowCount();i++){
-            modelo2.removeRow(i);
-            i=i-1;
-        
-        }
-    }
     
     
     public void eliminar(){

@@ -35,6 +35,8 @@ public class ControladorVideojuego implements ActionListener {
         
         this.vistaInventario=v;
         this.vistaInventario.refrescar.addActionListener(this);
+        this.vistaInventario.botonEliminar.addActionListener(this);
+        mostrarTabla(vistaInventario.tablaInventario);
     }
     
     public ControladorVideojuego(AgregarInventario v){
@@ -58,7 +60,29 @@ public class ControladorVideojuego implements ActionListener {
     }
     
     
+    public void eliminar(){
+        int fila=vistaInventario.tablaInventario.getSelectedRow();
+        if(fila==-1){
+            JOptionPane.showMessageDialog(null, "Primero debe seleccionar el videojuego que quiere eliminar");
+        }else{
+          int id=Integer.parseInt((String)vistaInventario.tablaInventario.getValueAt(fila, 0).toString());
+          int respuesta= JOptionPane.showConfirmDialog(null, "¿Esta seguro de elimiar el videojuego?", "Eliminar", JOptionPane.YES_NO_OPTION);
+              if(respuesta==JOptionPane.YES_OPTION){
+                  dao.eleminar(id);
+                  JOptionPane.showMessageDialog(null, "Se elimino el videojuego seleccionado");
+                }  
+        }
+      
+  
+        
+    }
     
+    public void limpiarTabla(){
+        for(int i=0;i<vistaInventario.tablaInventario.getRowCount();i++){
+            modelo.removeRow(i);
+            i=i-1;
+        }
+    }  
     public void mostrarTabla(JTable tabla) {
         modelo=(DefaultTableModel)tabla.getModel();
         ArrayList<Videojuego>lista=dao.buscarTodo();
@@ -139,8 +163,14 @@ public class ControladorVideojuego implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==vistaInventario.refrescar){
+            limpiarTabla();
             mostrarTabla(vistaInventario.tablaInventario);
-            vistaInventario.refrescar.setEnabled(false);
+            
+        }
+        if(e.getSource()==vistaInventario.botonEliminar){
+           eliminar();
+           limpiarTabla();
+           mostrarTabla(vistaInventario.tablaInventario);
         }
         if(e.getSource()==vistaAgregar.bAgregar){
             agregar();
@@ -151,6 +181,7 @@ public class ControladorVideojuego implements ActionListener {
         if(e.getSource()==vistaActualizar.actualizarb){
             actualizar();
         }
+        
         
     }
 }

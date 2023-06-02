@@ -105,6 +105,11 @@ public class Inventario extends javax.swing.JFrame {
         botonEliminar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         botonEliminar.setForeground(new java.awt.Color(255, 204, 0));
         botonEliminar.setText("Eliminar");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
 
         refrescar.setBackground(new java.awt.Color(102, 102, 102));
         refrescar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -200,6 +205,10 @@ public class Inventario extends javax.swing.JFrame {
     private void refrescarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refrescarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_refrescarActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonEliminarActionPerformed
 
     /**
      * @param args the command line arguments
