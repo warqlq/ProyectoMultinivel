@@ -10,6 +10,9 @@ import Visual.Clientes;
 import Visual.CrearCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -40,6 +43,8 @@ public class ControladorCliente implements ActionListener{
     public ControladorCliente(Clientes b) {
         this.vistacliente = b;
         this.vistacliente.RefrescarBTN.addActionListener(this);
+        this.vistacliente.EliminarBTN.addActionListener(this);
+        this.vistacliente.botonDescargarreporte.addActionListener(this);
     }
    
    
@@ -48,7 +53,7 @@ public class ControladorCliente implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         if(e.getSource()==vistacliente.RefrescarBTN){
-            JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
+            //JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
             mostrarTabla1(vistacliente.tablaClientes);
             vistacliente.RefrescarBTN.setEnabled(false);
         }
@@ -58,9 +63,108 @@ public class ControladorCliente implements ActionListener{
          if(e.getSource()==vistabuscar.botonBuscarinventario){       
              buscar();
         }
+         
+         if(e.getSource()==vistacliente.EliminarBTN){       
+             
+             eliminar();
+             limpiarTabla();
+             mostrarTabla1(vistacliente.tablaClientes);
+        }
+         
+          if(e.getSource()==vistacliente.botonDescargarreporte){       
+              
+             
+              JOptionPane.showMessageDialog(null, "PRUEBA PRUEBA");
+              descargarCSV();
+              
+             
+        }
           
         
     }
+    
+    
+    /*
+    
+    public void GenerarCSV(int id,String fecha,String hora,String tipoGasolina,float galones,int precioTotal,String nombreArchivo){
+        String[] datos = {String.valueOf(id),fecha,hora,tipoGasolina, String.valueOf(galones),String.valueOf(precioTotal)};
+          Path path = Paths.get(nombreArchivo);
+ 
+        boolean archivoExiste = Files.exists(path);
+        
+        try {
+            
+            FileWriter fileWriter = new FileWriter(nombreArchivo, true);
+            if (!archivoExiste) {
+                // Escribir el encabezado en el archivo si se está creando uno nuevo
+                //fileWriter.append("Id,Nombre Mascota ,Especie,Nombre Dueño,Descripción,Diagnostico\n");
+            }
+           
+            fileWriter.append(String.join(",", datos));
+            fileWriter.append("\n");
+            fileWriter.flush();
+            fileWriter.close();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+     
+        
+    }
+    */
+    
+    public void descargarCSV(){
+    
+        ArrayList<Cliente>lista3=dao.MostrarTodo();
+      
+       // String pru=lista3.toString();
+        
+       
+        
+    try {
+            try ( BufferedWriter escribir = new BufferedWriter(new FileWriter("ReporteClientes.csv", true))) {
+                
+                 String[] datos =new String[vistacliente.tablaClientes.getColumnCount()];
+                 
+                String texto = vistacliente.tablaClientes.getValueAt(0,0).toString()+vistacliente.tablaClientes.getValueAt(0,1).toString();
+                escribir.write(texto);
+                escribir.newLine();
+                escribir.close();
+                JOptionPane.showMessageDialog(null, "Registro exitoso del csv.");
+            }
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error al guardar los datos del csv.");
+        }
+    
+    
+    }
+    
+    
+    public void limpiarTabla(){
+    
+        for(int i=0;i<vistacliente.tablaClientes.getRowCount();i++){
+            modelo2.removeRow(i);
+            i=i-1;
+        
+        }
+    }
+    
+    
+    public void eliminar(){
+        
+        int fila=vistacliente.tablaClientes.getSelectedRow();
+              
+             if(fila==-1){
+                 JOptionPane.showMessageDialog(null, "Seleccione un cliente");
+             }else{
+                 long cc= Long.parseLong((String)vistacliente.tablaClientes.getValueAt(fila,0).toString());
+                 dao.eliminar(cc);
+                 JOptionPane.showMessageDialog(null, "Usuario eliminado");
+             }
+    
+    
+    }
+    
     
     public void crear(){
         

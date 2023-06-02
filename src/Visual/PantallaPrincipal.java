@@ -4,6 +4,7 @@
  */
 package Visual;
 
+import Controller.ControladorCliente;
 import Controller.ControladorVenta;
 import Controller.ControladorVideojuego;
 import static java.lang.System.exit;
@@ -166,6 +167,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void botonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonClientesActionPerformed
       
         Clientes cli=new Clientes();
+        ControladorCliente b=new ControladorCliente(cli);
         cli.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonClientesActionPerformed

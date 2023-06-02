@@ -113,21 +113,30 @@ public class ClienteDao implements DaoInterfaceCliente{
             }
             return lista1;
         }
+    
+    
+    
+    
+
+
+    @Override
+    public void eliminar(Long cedula) {
+        String sql="delete from cliente where cedula ="+cedula;
+        System.out.println("PRUBEA: "+cedula);
+        try{
+            Connection conectar = conexion.conectar();
+               PreparedStatement borrar = conectar.prepareStatement(sql);        
+                borrar.executeUpdate();
+            
+        }catch(Exception e){
+        
+        }
+    }
 
     
-    /*@Override
-    public void eleminar(Cliente cliente) {
-     
-    }
-*/
+    
+      
     
     
-    
-    
-    
-   /* @Override
-    public ArrayList<Cliente> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    */
+   
 }

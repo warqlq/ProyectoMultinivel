@@ -222,6 +222,7 @@ public class BuscarClienteCliente extends javax.swing.JFrame {
     private void botonVolver7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolver7ActionPerformed
        
         Clientes cli =new Clientes();
+        ControladorCliente b=new ControladorCliente(cli);
         cli.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonVolver7ActionPerformed
